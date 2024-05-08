@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Ввод результатов{% endblock %}
+
+{% block content %}
+
+    {% if message %}
+        <div class="alert alert-warning">
+            {{ message }}
+        </div>
+    {% else %}
+        <div class="content-container">
+            <h2 class="enter-result">Введите ваши результаты</h2>
+            <form method="post" class="results-form">
+                {% csrf_token %}
+                <div class="form-row">
+                {{ form.as_p }}
+                </div>
+                {% if exercise_ratings %}
+                    <h3>Ваши оценки по упражнениям:</h3>
+                    <ul class="exercise-list">
+                        {% for exercise_label, exercise_grade in exercise_ratings.items %}
+                            <li><strong>{{ exercise_label }} - </strong> {{ exercise_grade }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+             
+            <button type="submit" class="submit-button">Оценить</button>
+            </form>
+            
+
+        </div>
+    {% endif %}
+{% endblock %}

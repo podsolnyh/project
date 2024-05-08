@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+    <div class="home-container">
+        <h2>Приветствую, {{ request.user.username }}, ты находишься на странице выполнения нормативов Государственного физкультурно-оздоровительного комплекса</h2>
+          <h3>Целью <a href="https://www.minsksport.by/ru/gfok" class="gfo-link" target="_blank">ГФОК</a> является развитие физической культуры и спорта, 
+            оздоровление и физическое воспитание населения. </h3> 
+            <h3>  Каждый студент может опробовать свои силы при сдаче нормативов и оценить свой уровень подготовленности.  
+        </h3> 
+         <p>Здесь вы найдете информацию о нормативах ГФОК и технике выполнения упражнений, а также видео для каждого упражнения.</p>
+
+         <div class="exercise">
+            <h4>Прыжок в длину с места</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/reI88IvAqxY?si=jAIOiK73rYDH5fKm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </div>
+        <div class="exercise">
+            <h4>Наклон вперед из положения сидя</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/AAkYTi54FE4?si=KKj7jwNpdhvmF9Ru" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        
+        <div class="exercise">
+            <h4>Сгибание и разгибание рук в упоре лежа</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/37d8JMEAwLY?si=Gkmem8J96lh2bVSL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        
+        <div class="exercise">
+            <h4>Подтягивания на перекладине</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/lfdkVQkvTSw?si=S02R0TkAbWlOWY_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="exercise">
+            <h4>Поднимание туловища из положения лежа на спине (за 60 с)</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/rvuBkgnp0WI?si=vFwiwskmUXn7KhKX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="exercise">
+            <h4>Челночный бег 4x9 м</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/y_tgBkLbHro?si=sdQfnfTuiu2zxdKE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="exercise">
+            <h4>Бег на короткие дистанции</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JL9s0ny5VwE?si=o0Ll1YaOwbPbZ_dA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="exercise">
+            <h4>Бег на длинные дистанции</h4>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZpfQDVuk0LQ?si=CiacdVK4Z40YlJsg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </div>
+        
+    </div>
+    
+{% endblock %}

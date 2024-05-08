@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Профиль пользователя{% endblock %}
+
+{% block content %}
+    <div class="profile-container">
+        <h2 class="profile-heading">Данные аккаунта</h2>
+        
+        <div class="profile-details">
+            <p><strong>Имя:</strong> {{ request.user.username }}</p>
+            <p><strong>Email:</strong> {{ request.user.email }}</p>
+            <p><strong>Пол:</strong> {{ request.user.profile.gender }}</p>
+            <p><strong>Возраст:</strong> {{ request.user.profile.age }}</p>
+        </div>
+        
+        
+        <div id="edit-profile" class="edit-profile-section">
+            <div class="btn-profile-section">
+            <button onclick="showEditForm()" class="edit-button">Редактировать</button>
+            <form action="{% url 'logout' %}" method="post" class="logout-form">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Выйти из профиля</button>
+            </form> 
+            </div>
+            <div id="edit-form" style="display: none;">
+                <form method="post" action="{% url 'edit_profile' %}" class="edit-form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="gender" class="form-label">Пол:</label>
+                        <select name="gender" id="gender" class="form-control">
+                            <option value="M" {% if request.user.profile.gender == 'M' %}selected{% endif %}>Мужской</option>
+                            <option value="F" {% if request.user.profile.gender == 'F' %}selected{% endif %}>Женский</option>
+                        </select>
+                        <label for="age" class="form-label">Возраст:</label>
+                        <input type="number" name="age" id="age" value="{{ request.user.profile.age }}" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+                </form>
+            </div>
+        </div>
+        
+          
+    </div>
+
+    <script>
+        function showEditForm() {
+            document.getElementById("edit-form").style.display = "block";
+        }
+    </script>
+{% endblock %}

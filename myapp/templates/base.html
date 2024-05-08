@@ -1,0 +1,80 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Мой сайт{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=2">
+    
+</head>
+<body>
+    <header>
+        <div class="wrap-logo">
+            <a href="{% url 'home' %}" class="logo">
+                <img src="/static/images/logo.png" alt="Logo">
+            </a>
+            </div>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="menu">
+                <span class="sr-only"></span>
+                &#9776; <!-- Иконка гамбургера -->
+            </button>
+        <nav>
+            <ul class="nav">
+                {% if user.is_authenticated %}
+                <div class="header-box">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Главная страница</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'enter_results' %}">Нормативы</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'workout_program' %}">Программа тренировок</a></li>
+                    <li class="nav-item"><a a class="nav-link" href="{% url 'profile' %}">Профиль</a></li>
+                    <li class="nav-item"><a a  href="{% url 'logout' %}"><img src="/static/images/exit.png" alt="Logo">
+                        <span class="logout-text">Выйти</span></li></a>
+                    
+                </div>
+                {% else %}
+                    {% if request.path != '/register/' and request.path != '/login/' %}
+                    <div class="auth-forms-container">
+                        <a href="{% url 'register' %}">Регистрация</a>
+                        <a  href="{% url 'login' %}">Вход</a>
+                    <div/>
+                    {% endif %}
+                {% endif %}
+            </ul>
+        </nav>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    const mainContent = document.querySelector('main');
+    menuToggle.addEventListener('click', function() {
+
+        const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+        this.setAttribute('aria-expanded', !expanded);
+        nav.classList.toggle('active');
+        mainContent.classList.toggle('shifted');
+        
+    });
+});</script>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+   
+</body>
+<footer>
+    <div class="footer-content">
+        <div class="footer-left">
+            <p>&copy; 2024 GFOK</p>
+            
+        </div>
+        <div class="footer-right">
+            <p>Follow Us:</p>
+            <ul>
+                <li><a href="https://www.instagram.com/sport.vsu/"><img src="/static/images/insta.png" alt="Instagram"></a></li>
+                <li><a href=""><img src="/static/images/vk.png" alt="VK"></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</html>

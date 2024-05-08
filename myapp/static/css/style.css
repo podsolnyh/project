@@ -1,0 +1,502 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+body {
+  height: 300vh;
+  font-family: "Roboto";
+  overflow-x: hidden;
+  &.hidden {
+    overflow: hidden;
+  }
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   
+  }
+
+.wrap-logo {
+  display: flex;
+  align-items: center;
+}
+
+
+header a {
+    color: #212121;
+    padding: 15px;
+    
+    text-decoration: none;
+    font-size: 18px; 
+    border-radius: 4px;
+  }
+  
+  
+.header-box{
+  display: flex;
+  align-items: center
+  
+}
+ul{
+    list-style-type:  none;
+}
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для заголовка формы */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Стили для полей ввода */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* Стили для кнопок */
+.form-container button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 15px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.form-container button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+/* Стили для ссылок под формой */
+.form-link {
+    text-align: center;
+    margin-top: 15px;
+    
+}
+
+.form-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.form-link a:hover {
+    text-decoration: underline;
+}
+
+body.normative-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f8f9fa; /* Цвет фона страницы */
+}
+
+/* Стили для формы на странице нормативов */
+
+.content-container {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.content-container button[type="submit"]:hover{
+  background-color: #0056b3;
+}
+h2.enter-result {
+  text-align: center;
+  margin-bottom: 30px;
+  
+}
+.results-form button.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.exercise-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+.exercise-container{
+  display: flex;
+  flex-direction: column;
+
+}
+.form-row {
+  margin-bottom: 10px; /* Расстояние между каждой парой название-поле */
+}
+
+/* Стили для названия упражнения */
+.form-row label {
+  display: inline-block;
+  width: 55%; /* Ширина для названия упражнения */
+  font-weight: bold;
+}
+
+/* Стили для формы ввода (input) */
+.form-row input {
+  width: 44%; /* Ширина для поля ввода */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px; /* Расстояние подчеркивания от нижней границы текста */
+  height: 2px; /* Толщина подчеркивания */
+  background-color: #030303; 
+  visibility: hidden; /* Начинаем с невидимого подчеркивания */
+  transition: all 0.1s ease; /* Анимация появления */
+}
+
+.nav-link:hover::after {
+  visibility: visible; /* При наведении делаем подчеркивание видимым */
+}
+
+
+/* Стили для контейнера профиля */
+.profile-container {
+    margin-top: 50px;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Стили для заголовка профиля */
+.profile-heading {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Стили для раздела с деталями профиля */
+.profile-details {
+    font-size: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для кнопки редактирования */
+.edit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Стили для формы редактирования */
+.edit-form {
+    margin-top: 20px;
+}
+
+
+/* Стили для полей ввода в форме редактирования */
+.form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.form-group{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.form-control {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    
+}
+
+/* Стили для кнопок в форме */
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.btn-profile-section{
+  display: flex;
+  justify-content: space-between;
+}
+.edit-button:hover{
+  background-color: #0056b3;
+}
+/* Стили для кнопки сохранения */
+.btn-primary {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+}
+.btn-primary:hover{
+  background-color: #3b9650;
+}
+/* Стили для кнопки выхода */
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+}
+.btn-danger:hover{
+  background-color: #c9525e;
+}
+
+
+.home-container {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align:justify;
+
+}
+
+
+.exercise {
+  margin-bottom: 30px;
+}
+
+.exercise h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.exercise p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.exercise iframe {
+  width: 100%;
+  height: 400px;
+}
+.gfo-link {
+  color: #007bff; /* Синий цвет текста */
+  text-decoration: none; /* Убираем подчеркивание ссылки */
+  padding-bottom: 2px; /* Добавляем небольшой отступ снизу для разделения */
+}
+
+.gfo-link:hover {
+  color: #0056b3; /* Изменяем цвет текста при наведении */
+  border-bottom-color: #0056b3; /* Изменяем цвет обводки при наведении */
+}
+.workout_program{
+  text-align: center;
+}
+.training-program {
+  max-width: 730px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: justify;
+}
+
+
+
+.training-program .day {
+  margin-bottom: 20px;
+
+}
+
+
+
+.training-program ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.training-program li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .training-program {
+      padding: 10px;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+
+
+.menu-toggle {
+  display: none; /* Скрываем кнопку на больших экранах */
+  font-size: 24px;
+  
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu-toggle {
+  display: none; /* Скрываем кнопку на больших экранах */
+  font-size: 24px;
+  color: #000000;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.logout-text {
+  display: none; /* По умолчанию скрываем текст */
+}
+
+@media (max-width:900px){
+  .logo {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .logout-text {
+    display: inline; /* Отображаем текст "Выйти" */
+}
+
+.nav-item img {
+    display: none; /* Скрываем изображение "exit.png" */
+}
+  .header-box{
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-toggle {
+      display: block; /* Показываем кнопку на маленьких экранах */
+  }
+
+  nav {
+      display: none; /* Скрываем меню на маленьких экранах */
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      
+  }
+
+  nav.active {
+      display: block; /* Показываем меню при активированном состоянии */
+  }
+
+  nav ul {
+      display: block;
+      text-align: center;
+  }
+
+  nav ul li {
+      display: block;
+      margin-bottom: 15px;
+  }
+  main {
+    transition: padding-top 0.3s ease-in-out;
+    padding-top: 0; /* Начальный отступ сверху */
+}
+
+main.shifted {
+    padding-top: 200px; /* Высота гамбургер-меню */
+}
+.btn-profile-section{
+  display: flex;
+  flex-direction: column;
+}
+}
+
+.footer-content {
+  margin-top:800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+
+
+.footer-left ul,
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-left ul li,
+.footer-right ul li {
+  margin-bottom: 8px;
+}
+
+.footer-left ul li a,
+.footer-right ul li a {
+  text-decoration: none;
+}
+
+.footer-right ul li {
+  display: inline-block;
+}
+
+
+
+.footer-right ul li a:hover {
+  opacity: 0.7;
+  
+}
+
+
